@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-signed int quicksearch(int *, uint32_t, uint32_t);
+signed int binarysearch(int *, uint32_t, uint32_t);
 
 int main(void)
 {
     uint32_t ans = 0;
     int arr[10] = {1, 3, 6, 7, 11, 13, 14, 16, 19, 22};
 
-    ans = quicksearch(arr, 10, 15);
+    ans = binarysearch(arr, 10, 15);
     printf("answer: %d\n", ans);
 
     return EXIT_SUCCESS;
@@ -17,7 +17,7 @@ int main(void)
 /*
  *n0<n1<n2...
  */
-signed int quicksearch(int *arr, uint32_t arr_size, uint32_t search)
+signed int binarysearch(int *arr, uint32_t arr_size, uint32_t search)
 {
     //array is empty
     if(!arr_size)
