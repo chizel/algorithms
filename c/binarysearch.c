@@ -20,7 +20,7 @@ int main(void)
  */
 signed int binarysearch(int *arr, uint32_t arr_size, int32_t search)
 {
-    //array is empty
+    //array has one or less elements
     if(!arr_size)
     {
         return -1;
