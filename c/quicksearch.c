@@ -15,11 +15,16 @@ int main(void)
 }
 
 /*
- *n0<n1<n2 ...
- *
+ *n0<n1<n2...
  */
 signed int quicksearch(int *arr, uint32_t arr_size, uint32_t search)
 {
+    //array is empty
+    if(!arr_size)
+    {
+        return -1;
+    }
+
     uint32_t low, middle, high;
     low = 0;
     high = arr_size - 1;
