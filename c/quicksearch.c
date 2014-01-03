@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int quicksearch(int *, int, int);
+signed int quicksearch(int *, uint32_t, uint32_t);
 
 int main(void)
 {
-    int ans = 0;
+    uint32_t ans = 0;
     int arr[10] = {1, 3, 6, 7, 11, 13, 14, 16, 19, 22};
 
     ans = quicksearch(arr, 10, 15);
@@ -18,9 +18,9 @@ int main(void)
  *n0<n1<n2 ...
  *
  */
-int quicksearch(int *arr, int arr_size, int search)
+signed int quicksearch(int *arr, uint32_t arr_size, uint32_t search)
 {
-    int low, middle, high;
+    uint32_t low, middle, high;
     low = 0;
     high = arr_size - 1;
 
@@ -42,5 +42,5 @@ int quicksearch(int *arr, int arr_size, int search)
         }
     }
 
-    return 0;
+    return -1;
 }
