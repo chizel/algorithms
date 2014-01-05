@@ -91,6 +91,7 @@ int32_t *mergesort(int32_t *arr, uint32_t size)
             j++;
     }
 
+    //не освобождается память!!!!
     /*free(arr1);*/
     /*free(arr2);*/
 
