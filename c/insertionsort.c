@@ -35,14 +35,15 @@ int32_t *insertionsort(int32_t *arr, uint32_t size)
     for(i = 1; i < size; i++)
     {
         j = i;
+        tmp = arr[j];
 
-        while( j && (arr[j] < arr[j - 1]) )
+        while( j && (arr[j -1] > tmp) )
         {
-            tmp = arr[j];
             arr[j] = arr[j - 1];
-            arr[j - 1] = tmp;
             j--;
         }
+
+        arr[j] = tmp;
     }
 
     return arr;
