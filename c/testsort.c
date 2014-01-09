@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <time.h>
 #include "testsort.h"
 
 int check_sorting(int32_t *arr, uint32_t arr_size)
@@ -41,7 +42,13 @@ int32_t *generate_array(uint32_t arr_size)
 
     srand(time(NULL));
     
-    arr = (int32_t *)malloc( sizeof(int32_t) * arr_size);
+    arr = malloc(sizeof(int32_t) * arr_size);
+
+    if(arr == NULL)
+    {
+        printf("Error! Can't allocate memory!\n");
+        exit(0);
+    }
     
     for(i = 0; i < arr_size; i++)
     {
