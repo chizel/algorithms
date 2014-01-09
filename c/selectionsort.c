@@ -1,28 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "testsort.h"
 
 int32_t *selectionsort(int32_t *, uint32_t);
 
 int main(void)
 {
-    int i = 0;
+    int32_t *arr;
 
-    int arr[10] = {15, 91, 13, 32, 21, 12, 17, 23, 10, 11};
-
-    for(i = 0; i < 10; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    putc('\n', stdout);
-
-    selectionsort(arr, 10);
-
-    for(i = 0; i < 10; i++)
-    {
-        printf("%d ", arr[i]);
-    }
-    putc('\n', stdout);
+    arr = generate_array(ARR_SIZE);
+    print_array(arr, ARR_SIZE);
+    selectionsort(arr, ARR_SIZE);
+    check_sorting(arr, ARR_SIZE);
 
     return EXIT_SUCCESS;
 }
