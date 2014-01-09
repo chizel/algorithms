@@ -7,7 +7,6 @@ int32_t *insertionsort(int32_t *, uint32_t);
 
 int main(void)
 {
-    int i = 0;
     int32_t *arr;
 
     arr = generate_array(ARR_SIZE);
